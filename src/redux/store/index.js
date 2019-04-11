@@ -12,5 +12,5 @@ const store = createStore(
   createRootReducer(),
   compose(applyMiddleware(...middlewares))
 );
-console.log(store, store.getState());
+// console.log(store, store.getState());
 export default store;
