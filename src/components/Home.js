@@ -9,6 +9,13 @@ class Home extends Component {
     setSuccess();
     setName("Mickey");
   };
+  jumpByPath = path => {
+    const { history } = this.props;
+    history.push({ pathname: path });
+  };
+  goAbout = () => {
+    this.jumpByPath("/About");
+  };
   render() {
     const { testData } = this.props;
     const { isSuccess, name } = testData;
@@ -19,6 +26,7 @@ class Home extends Component {
         <p>success: {isSuccess}</p>
         <p>name: {name}</p>
         <button onClick={this.handleClick}>set success</button>
+        <button onClick={this.goAbout}>go about</button>
       </div>
     );
   }

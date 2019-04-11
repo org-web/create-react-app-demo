@@ -1,21 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
+import { HashRouter as Router, Route } from "react-router-dom";
 
 import store from "./redux/store";
-import Home from "./components/Home";
+import BasicLayout from "./layouts/BasicLayout";
 
-class App extends Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <div className="App">
-          <p>Hello World!</p>
-          <Home />
-        </div>
-      </Provider>
-    );
-  }
-}
-
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <Provider store={store}>
+    <Router>
+      <div>
+        <Route path="/" component={BasicLayout} />
+      </div>
+    </Router>
+  </Provider>,
+  document.getElementById("root")
+);
