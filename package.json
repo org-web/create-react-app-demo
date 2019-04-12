@@ -32,6 +32,7 @@
   ],
   "devDependencies": {
     "less": "^3.9.0",
-    "less-loader": "^4.1.0"
+    "less-loader": "^4.1.0",
+    "react-app-rewire-eslint": "^0.2.3"
   }
 }
